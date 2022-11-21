@@ -2,4 +2,4 @@
 
 ## Sample of the Application
 
-!['screenshot']('screenshot.PNG')
+<img src="./screenshot.PNG">
