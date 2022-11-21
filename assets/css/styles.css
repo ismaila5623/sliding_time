@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgray;
+}
+.container{
+    width: 700px;
+    height:100vh;
+    margin:0 auto;
+    background-color: gray;
+    outline:1px solid black;
+}
+.wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.title{
+    color:white;
+    font-size: 4em;
+    text-shadow: 0 0 20px white;
+    position: absolute;
+    top:27%;
+}
+.time-container{
+    background-color: white;
+    padding:1em 2em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+    box-shadow: 0 0 20px white;
+}
+.timer-outer{
+    width:99px;
+    height:200px;
+    outline:3px solid green;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1em;
+    padding: .2em .3em;
+    background-color: gray;
+    transform: rotate(180deg);
+    position: relative;
+    transform-style:preserve-3d;
+}
+.timer-inner{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 95%;
+    height: 48%;
+    top:0;
+    left:2px;
+}
+.reverse{
+    top:3px;
+    backface-visibility: visible;
+    transform: rotateX(-180deg) rotateY(180deg) translateY(0);
+    transform: rotateX(-360deg) rotateY(180deg) translateY(102%);
+    z-index: 100;
+    transition: all .9s ease;
+}
+.bottom{
+    backface-visibility: visible;
+    top:50%;
+    transform: rotateX(-180deg) rotateY(180deg) translateY(102%);
+    z-index:10;
+    transition: all .9s ease;
+}
+.timer-label, .timer-digit{
+    font-size:1.5rem;
+    color:black;
+    padding:.2em .5em;
+    text-transform: capitalize;
+}
+.timer-label{
+
+}
+.timer-digit{
+    font-weight: bold;
+    font-size: 2em;
+}
